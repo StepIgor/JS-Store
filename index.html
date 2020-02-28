@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Главная | JS Store</title>
-    <link rel="shortcut icon" href="favicon.png">
-    <meta name="viewport" content="width=device-width"></meta>
-    <link rel="stylesheet" href="css/materialize.min.css"></link>
-    <link rel="stylesheet" href="css/icon.css"></link>
-  </head>
-  <body>
 
-    <nav>
+<head>
+  <meta charset="utf-8">
+  <title>Главная | JS Store</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width">
+  </meta>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  </link>
+  <link rel="stylesheet" href="css/icon.css">
+  </link>
+</head>
+
+<body>
+
+  <nav>
     <div class="nav-wrapper amber">
       <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
-      <a href="index.html" class="brand-logo hide-on-med-and-up">JS Store</a>
+      <a href="index.html" class="brand-logo hide-on-large-only">JS Store</a>
       <ul id="nav-mobile" style="margin-left:130px;" class="left hide-on-med-and-down">
         <li><a href="index.html">Магазин</a></li>
         <li><a href="library.html">Библиотека</a></li>
@@ -21,7 +26,70 @@
     </div>
   </nav>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/materialize.min.js"></script>
-  </body>
+  <section class="black">
+    <div class="carousel carousel-slider" data-indicators="true">
+      <div class="carousel-item red lighten-2 white-text" href="#one!" style="background:url('img/start/1.jpg');">
+        <div class="container center-align">
+          <h1>Добро пожаловать!</h1>
+          <br /><br /><br /><br class="hide-on-small-only" /><br class="hide-on-small-only" />
+          <h5 class="white-text light">Бесплатные open-source решения, которые не требуют скачивания и установки на устройство.</h5>
+        </div>
+      </div>
+      <div class="carousel-item red lighten-2 white-text" href="#two!" style="background:url('img/start/2.jpg');">
+        <div class="container center-align">
+          <h1>Ваш собственный дневник</h1>
+          <br /><br /><br class="hide-on-small-only" /><br class="hide-on-small-only" /><br class="hide-on-small-only" />
+          <h5 class="white-text light">Вести записи полезно и просто. Попробуйте новое приложение!</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <ul class="collapsible" style="margin-top:-5px;">
+    <li class="active">
+      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">fiber_new</i>Новое в магазине</h4></div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+  <ul class="collapsible" style="margin-top:-5px;">
+    <li class="active">
+      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">apps</i>Список приложений</h4></div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+  <ul class="collapsible" style="margin-top:-5px;">
+    <li class="active">
+      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">layers</i>Список игр</h4></div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script>
+    function autoplay() {
+      $('.carousel').carousel('next');
+    }
+
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.carousel').carousel({
+        dist: 0,
+        padding: 0,
+        fullWidth: true,
+        indicators: true,
+        duration: 100,
+      });
+      setInterval(autoplay, 4500);
+    });
+  </script>
+</body>
+
 </html>
