@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> | JS Store</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width">
+  </meta>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  </link>
+  <link rel="stylesheet" href="css/icon.css">
+  </link>
+  <style>
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #FFFFFF;
+    }
+
+    #form1 {
+      margin-left: calc(100% - 410pt);
+    }
+
+    #searchResults2 {
+      background-color: #FFFFFF;
+    }
+
+    #searchResults {
+      background-color: #FFFFFF;
+      color: black;
+      padding-left: 15px;
+      margin-top: -10px;
+      z-index: 5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper amber">
+        <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
+        <a href="index.html" class="brand-logo hide-on-large-only">JS Store</a>
+        <ul id="nav-mobile" style="margin-left:130px;" class="left hide-on-med-and-down">
+          <li><a href="index.html">Магазин</a></li>
+          <li><a href="library.html">Библиотека</a></li>
+        </ul>
+        <form class="hide-on-med-and-down" id="form1">
+          <div class="input-field" style="max-width: 400pt;">
+            <input id="search" type="search" onfocusout="search_hide_result()" oninput='search_show_result(this.value)' placeholder="Начните поиск здесь..." required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults">
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </div>
+
+
+  <div id="not_found" class="container" style="display:none;">
+    <div class="row">
+      <div class="card col s12 grey lighten-5">
+        <div class="row">
+          <div class="col s12 center-align">
+            <br />
+            <i class="material-icons large red-text">error</i>
+            <br />
+            <br />
+            <h4>Приложение не найдено.</h4>
+            <br />
+            <h5 class="light">Перепроверьте ссылку. Вероятно, там опечатка или указан неверный id.</h5>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="found" class="container" style="display:none;">
+    <div class="row">
+      <div class="card col s12">
+        <div class="row">
+          <div class="col s6 m4 l3">
+            <img id="icon_block" style="height:265px;width:265px;padding:15px;" src="" alt="">
+          </div>
+          <div class="col s4 m4 l7">
+            <h3 id="title_block" class="light"></h3>
+            <span id="developer_block" class="amber-text text-darken-2"></span> ● <span id="app_category" class="amber-text text-darken-2"></span>
+            <br /><br />
+            <span id="short_desc"></span><br /><br />
+            <span class="grey-text">Версия: </span><span id="version_block" class="grey-text"></span>
+            <br />
+            <span><i class="material-icons left" id="mobile_support_icon">phone_iphone</i><span id="mobile_support"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="other_platforms_card">
+      <div class="card col s12" style="padding:15px;">
+        <div class="row">
+          <div class="col s12">
+            <h5 class="light">Продукт доступен на других платформах:</h5>
+            <br />
+            <a id="source_web" target="_blank" href="#"><img src="img/buttons/on_web.jpg" style="height:64px;" /></a>
+            <a id="source_android" href="#" target="_blank"><img style="display:none;height:64px;" src="img/buttons/google_play.jpg" id="source_android_img" style="height:64px;" /></a>
+            <a id="source_windows" href="#" target="_blank"><img style="display:none;height:64px;" src="img/buttons/microsoft_store.png" id="source_windows_img" style="height:64px;" /></a>
+            <br /><br />
+            <a class="amber-text text-darken-2" target="_blank" id="github_url"><i class="material-icons left">code</i>Открыть репозиторий с исходным кодом</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col card s12" style="padding:15px;">
+        <h5 class="light">Скриншоты:</h5>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
+</html>
