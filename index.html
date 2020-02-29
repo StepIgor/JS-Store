@@ -11,10 +11,33 @@
   </link>
   <link rel="stylesheet" href="css/icon.css">
   </link>
+  <style>
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #FFFFFF;
+    }
+
+    #form1 {
+      margin-left: calc(100% - 410pt);
+    }
+
+    #searchResults2 {
+      background-color: #FFFFFF;
+    }
+
+    #searchResults {
+      background-color: #FFFFFF;
+      color: black;
+      padding-left: 15px;
+      margin-top: -10px;
+      z-index: 5;
+    }
+  </style>
 </head>
 
 <body>
 
+<div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper amber">
       <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
@@ -23,11 +46,23 @@
         <li><a href="index.html">Магазин</a></li>
         <li><a href="library.html">Библиотека</a></li>
       </ul>
+      <form class="hide-on-med-and-down" id="form1">
+        <div class="input-field" style="max-width: 400pt;">
+          <input id="search" type="search" onfocusout="search_hide_result()" oninput='search_show_result(this.value)' placeholder="Начните поиск здесь..." required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+          <div id="searchResults">
+
+          </div>
+        </div>
+      </form>
     </div>
   </nav>
+</div>
+
 
   <section class="black">
-    <div class="carousel carousel-slider" data-indicators="true">
+    <div class="carousel carousel-slider" data-indicators="true" style="z-index:1;">
       <div class="carousel-item red lighten-2 white-text" href="#one!" style="background:url('img/start/1.jpg');">
         <div class="container center-align">
           <h1>Добро пожаловать!</h1>
@@ -49,21 +84,27 @@
 
   <ul class="collapsible" style="margin-top:-5px;">
     <li class="active">
-      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">fiber_new</i>Новое в магазине</h4></div>
+      <div class="collapsible-header">
+        <h4><i class="material-icons left" style="font-size:36px;">fiber_new</i>Новое в магазине</h4>
+      </div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
 
   <ul class="collapsible" style="margin-top:-5px;">
     <li class="active">
-      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">apps</i>Список приложений</h4></div>
+      <div class="collapsible-header">
+        <h4><i class="material-icons left" style="font-size:36px;">apps</i>Список приложений</h4>
+      </div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
 
   <ul class="collapsible" style="margin-top:-5px;">
     <li class="active">
-      <div class="collapsible-header"><h4><i class="material-icons left" style="font-size:36px;">layers</i>Список игр</h4></div>
+      <div class="collapsible-header">
+        <h4><i class="material-icons left" style="font-size:36px;">layers</i>Список игр</h4>
+      </div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
@@ -90,6 +131,8 @@
       setInterval(autoplay, 4500);
     });
   </script>
+  <script src="js/search.js"></script>
+  <script src="js/db.js"></script>
 </body>
 
 </html>
