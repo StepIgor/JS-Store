@@ -1,3 +1,8 @@
+$(document).ready(function(){
+    $('.slider').slider({height:400,interval:3000});
+  });
+
+
 var params = window
     .location
     .search
@@ -38,6 +43,11 @@ if (params['id'] == "" || params['id'] == undefined){
     document.getElementById('version_block').innerHTML = db[parseInt(params['id'])]['version'];
     document.getElementById('source_web').href = db[parseInt(params['id'])]['active_url'];
     document.getElementById('github_url').href = db[parseInt(params['id'])]['repos_url'];
+    document.getElementById('prod_description').innerHTML = db[parseInt(params['id'])]['full_description'];
+    document.getElementById('changelog_block').innerHTML = db[parseInt(params['id'])]['change_log'];
+    document.getElementById('pub_date_line').innerHTML = db[parseInt(params['id'])]['publish_date'];
+    document.getElementById('dev_info_line').innerHTML = developers[parseInt(params['id'])]['username'];
+    document.getElementById('cat_info_line').innerHTML = types[db[parseInt(params['id'])]['type']];
 
     if (db[parseInt(params['id'])]['mobile_support'] == true){
       $('#mobile_support').html('Продукт поддерживает мобильную версию.');
@@ -62,6 +72,15 @@ if (params['id'] == "" || params['id'] == undefined){
       }
     }
 
+
+    for (elem = 1; elem <= db[parseInt(params['id'])]['screenshots']; elem++){
+      document.getElementById('scr_slides').innerHTML += '<li><div style="margin:0 auto;height:400px;width:708px;background-size:100% 100%;background-position:center;background-repeat:no-repeat;background:url(\'img/apps_screenshots/'+params['id']+'/'+elem+'.png\');"></div></li>';
+    }
+
+    $(document).ready(function(){
+      document.getElementById('install_but').style.marginTop = (($('#id_card_for_but').height()/2) - ($('#install_but').height()/2)) + 'px';
+      setTimeout(function(){$('#install_but').css({'visibility':'visible'});},200);
+    });
 
     $('#found').css({'display':'block'});
   } else {

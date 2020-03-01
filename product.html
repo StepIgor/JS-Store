@@ -32,6 +32,26 @@
       margin-top: -10px;
       z-index: 5;
     }
+
+
+    .slider .indicators .indicator-item {
+      background-color: #FFFFFF;
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .slider .indicators .indicator-item.active {
+      background-color: orange;
+    }
+
+    .slides {
+      text-align: center !important;
+    }
+
+
   </style>
 </head>
 
@@ -82,10 +102,10 @@
 
   <div id="found" class="container" style="display:none;">
     <div class="row">
-      <div class="card col s12">
-        <div class="row">
+      <div class="card col s12 grey lighten-5">
+        <div id="id_card_for_but" class="row">
           <div class="col s6 m4 l3">
-            <img id="icon_block" style="height:265px;width:265px;padding:15px;" src="" alt="">
+            <img id="icon_block" style="width:100%;padding:15px;" src="" alt="">
           </div>
           <div class="col s4 m4 l7">
             <h3 id="title_block" class="light"></h3>
@@ -96,11 +116,14 @@
             <br />
             <span><i class="material-icons left" id="mobile_support_icon">phone_iphone</i><span id="mobile_support"></span></span>
           </div>
+          <div class="col s2 m4 l2 right-align">
+            <a id="install_but" style="display:block;visibility:hidden;" class="waves-effect waves-light btn amber white-text"><i class="material-icons left">add</i>Получить</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="row" id="other_platforms_card">
-      <div class="card col s12" style="padding:15px;">
+      <div class="card col s12 grey lighten-5" style="padding:15px;">
         <div class="row">
           <div class="col s12">
             <h5 class="light">Продукт доступен на других платформах:</h5>
@@ -116,10 +139,53 @@
     </div>
 
     <div class="row">
-      <div class="col card s12" style="padding:15px;">
+      <div class="col card s12 grey lighten-5" style="padding:15px;">
         <h5 class="light">Скриншоты:</h5>
+        <br />
+        <div class="slider">
+          <ul class="slides" id="scr_slides">
+
+          </ul>
+        </div>
       </div>
     </div>
+
+
+    <div class="row">
+      <div class="col card s12 grey lighten-5" style="padding:15px;">
+        <h5 class="light">Изменения в последней версии:</h5>
+        <br />
+        <div id="changelog_block">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col card s12 grey lighten-5" style="padding:15px;">
+        <h5 class="light">Описание:</h5>
+        <br />
+        <div id="prod_description">
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col card s12 grey lighten-5" style="padding:15px;">
+        <table style="border-collapse:separate;">
+          <tr>
+            <td><b>Разработчик: </b><span id="dev_info_line"></span></td>
+            <td><b>Дата публикации: </b><span id="pub_date_line"></span></td>
+            <td><b>Категория: </b><span id="cat_info_line"></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
   </div>
 
 
