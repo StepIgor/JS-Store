@@ -78,6 +78,10 @@ if (params['id'] == "" || params['id'] == undefined){
     }
 
     $(document).ready(function(){
+      if (JSON.parse(localStorage.getItem('library')).indexOf(parseInt(params['id'])) != -1){
+        $('#install_but').html('<i class="material-icons left">launch</i>Запустить');
+      }
+
       document.getElementById('install_but').style.marginTop = (($('#id_card_for_but').height()/2) - ($('#install_but').height()/2)) + 'px';
       setTimeout(function(){$('#install_but').css({'visibility':'visible'});},200);
     });
@@ -90,4 +94,19 @@ if (params['id'] == "" || params['id'] == undefined){
     document.title = "Ошибка, приложение не найдено! | JS Store";
   }
 
+}
+
+
+function launch(){
+  if (JSON.parse(localStorage.getItem('library')).indexOf(parseInt(params['id'])) != -1){
+    document.location.href = db[params['id']]['active_url'];
+  } else {
+    lib_add = JSON.parse(localStorage.getItem('library'));
+    lib_add.push(parseInt(params['id']));
+    localStorage.setItem('library',JSON.stringify(lib_add));
+
+    $("#install_but").css({'visibility':'hidden'});
+
+    setTimeout(function(){$('#install_but').html('<i class="material-icons left">launch</i>Запустить');$("#install_but").css({'visibility':'visible'});},1500);
+  }
 }
