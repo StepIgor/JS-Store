@@ -81,7 +81,7 @@
           <h5 class="white-text light">Бесплатные open-source решения, которые не требуют скачивания и установки на устройство.</h5>
         </div>
       </div>
-      <div class="carousel-item red lighten-2 white-text" href="#two!" style="background:url('img/start/2.jpg');">
+      <div class="carousel-item red lighten-2 white-text" href="#two!" style="background:url('img/start/2.jpg');cursor:pointer;" onclick="document.location.href='product.html?id=1'">
         <div class="container center-align">
           <h3>Ваш собственный дневник</h3>
           <br /><br /><br class="hide-on-small-only" /><br class="hide-on-small-only" /><br class="hide-on-small-only" />
@@ -98,7 +98,11 @@
       <div class="collapsible-header">
         <h4><i class="material-icons left" style="font-size:36px;">fiber_new</i>Новое в магазине</h4>
       </div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-body">
+        <div class="row" id="new_in_store">
+
+        </div>
+      </div>
     </li>
   </ul>
 
@@ -107,7 +111,11 @@
       <div class="collapsible-header">
         <h4><i class="material-icons left" style="font-size:36px;">apps</i>Список приложений</h4>
       </div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-body">
+        <div class="row" id="apps_in_store">
+
+        </div>
+      </div>
     </li>
   </ul>
 
@@ -116,7 +124,11 @@
       <div class="collapsible-header">
         <h4><i class="material-icons left" style="font-size:36px;">layers</i>Список игр</h4>
       </div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-body">
+        <div class="row" id="games_in_store">
+
+        </div>
+      </div>
     </li>
   </ul>
 
@@ -144,6 +156,7 @@
   </script>
   <script src="js/db.js"></script>
   <script src="js/search.js"></script>
+  <script src="js/start.js"></script>
 </body>
 
 </html>
