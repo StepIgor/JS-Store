@@ -28,9 +28,20 @@
     #searchResults {
       background-color: #FFFFFF;
       color: black;
-      padding-left: 15px;
       margin-top: -10px;
       z-index: 5;
+    }
+
+    .search_line_effect{
+      background:#FFFFFF;
+      color:black;
+      width:100%;
+      height:70px;
+    }
+    .search_line_effect :hover{
+      background:orange;
+      color:white;
+      cursor:pointer;
     }
   </style>
 </head>
@@ -131,8 +142,8 @@
       setInterval(autoplay, 4500);
     });
   </script>
-  <script src="js/search.js"></script>
   <script src="js/db.js"></script>
+  <script src="js/search.js"></script>
 </body>
 
 </html>
