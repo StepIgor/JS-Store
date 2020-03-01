@@ -83,8 +83,11 @@ if (params['id'] == "" || params['id'] == undefined){
     });
 
     $('#found').css({'display':'block'});
+
+    document.title = db[params['id']]['product_name'] + " | JS Store";
   } else {
     $('#not_found').css({'display':'block'});
+    document.title = "Ошибка, приложение не найдено! | JS Store";
   }
 
 }

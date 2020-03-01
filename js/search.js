@@ -1,3 +1,10 @@
+if (localStorage.getItem('library') == null){
+  library = [];
+
+  localStorage.setItem('library',JSON.stringify(library));
+}
+
+
 function search_show_result(txt) {
   if (txt == ""){return}
   result_html = "";
