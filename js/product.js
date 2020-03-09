@@ -37,10 +37,13 @@ if (params['id'] == "" || params['id'] == undefined){
     //fill data
     document.getElementById('icon_block').src = "img/apps_screenshots/"+params['id']+"/0.png";
     document.getElementById('title_block').innerHTML = db[parseInt(params['id'])]['product_name'];
+    document.getElementById('title_block_mob').innerHTML = db[parseInt(params['id'])]['product_name'];
     document.getElementById('developer_block').innerHTML = developers[parseInt(params['id'])]['username'];
     document.getElementById('app_category').innerHTML = types[db[parseInt(params['id'])]['type']];
     document.getElementById('short_desc').innerHTML = db[parseInt(params['id'])]['short_description'];
     document.getElementById('version_block').innerHTML = db[parseInt(params['id'])]['version'];
+    document.getElementById('short_desc_mob').innerHTML = db[parseInt(params['id'])]['short_description'];
+    document.getElementById('version_block_mob').innerHTML = db[parseInt(params['id'])]['version'];
     document.getElementById('source_web').href = db[parseInt(params['id'])]['active_url'];
     document.getElementById('github_url').href = db[parseInt(params['id'])]['repos_url'];
     document.getElementById('prod_description').innerHTML = db[parseInt(params['id'])]['full_description'];
@@ -51,10 +54,14 @@ if (params['id'] == "" || params['id'] == undefined){
 
     if (db[parseInt(params['id'])]['mobile_support'] == true){
       $('#mobile_support').html('Продукт поддерживает мобильную версию.');
+      $('#mobile_support_mob').html('Продукт поддерживает мобильную версию.');
       $('#mobile_support_icon').css({'color':'green'});
+      $('#mobile_support_icon_mob').css({'color':'green'});
     } else {
       $('#mobile_support').html('Продукт поддерживает не мобильную версию.');
+      $('#mobile_support_mob').html('Продукт поддерживает не мобильную версию.');
       $('#mobile_support_icon').css({'color':'red'});
+      $('#mobile_support_icon_mob').css({'color':'red'});
       $('#mobile_support_icon').html();
     }
 
