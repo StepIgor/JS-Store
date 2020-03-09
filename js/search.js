@@ -31,3 +31,32 @@ function search_show_result(txt) {
 function search_hide_result() {
   setTimeout(function(){$('#searchResults').html('');},85);
 }
+
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+
+function search_show_result_mob(txt){
+  if (txt == ""){return}
+  result_html = "";
+  txt = txt.toLowerCase();
+  found = [];
+
+  for (prod = 1; prod <= Object.keys(db).length; prod++){
+    if (db[prod]['product_name'].toLowerCase().indexOf(txt) != -1){
+      found.push(prod);
+    }
+  }
+
+  for (prod = 0; prod < found.length; prod++){
+    result_html += "<li><a class='waves-effect' style='line-height:20px;padding-top:7px;' href='product.html?id="+found[prod]+"'><img style='vertical-align:middle;height:32px;width:32px;' src='img/apps_screenshots/"+found[prod]+"/0.png'> <span style='vertical-align:middle;'>"+db[parseInt(found[prod])]['product_name']+"</span></a></li>";
+  }
+
+  if (found.length == 0){
+    result_html = "<li><a href=''>Ничего не найдено</a></li>"
+  }
+
+  $('#searchResults2').html(result_html);
+}

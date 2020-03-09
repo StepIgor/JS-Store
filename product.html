@@ -71,6 +71,7 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper amber">
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small"><i class="material-icons">menu</i></a>
         <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
         <a href="index.html" class="brand-logo hide-on-large-only">JS Store</a>
         <ul id="nav-mobile" style="margin-left:130px;" class="left hide-on-med-and-down">
@@ -91,6 +92,18 @@
     </nav>
   </div>
 
+  <ul id="slide-out" class="sidenav">
+    <li><a class="subheader">Основные разделы</a></li>
+    <li><a class="waves-effect" href="index.html">Главная</a></li>
+    <li><a class="waves-effect" href="library.html">Библиотека</a></li>
+    <div class="divider">
+    </div>
+    <li><a class="subheader">Поиск</a></li>
+    <li><input type="text" required maxlength="32" oninput="search_show_result_mob(this.value)" style="margin-left:32px;width:80%;"></input></li>
+    <div id="searchResults2">
+
+    </div>
+  </ul>
 
   <div id="not_found" class="container" style="display:none;">
     <div class="row">
@@ -203,9 +216,9 @@
 
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
-  <script src="js/db.js"></script>
-  <script src="js/product.js"></script>
-  <script src="js/search.js"></script>
+  <script src="js/db.js?ver=1.0.0"></script>
+  <script src="js/product.js?ver=1.0.0"></script>
+  <script src="js/search.js?ver=1.0.0"></script>
 </body>
 
 </html>

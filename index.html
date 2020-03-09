@@ -32,45 +32,59 @@
       z-index: 5;
     }
 
-    .search_line_effect{
-      background:#FFFFFF;
-      color:black;
-      width:100%;
-      height:70px;
+    .search_line_effect {
+      background: #FFFFFF;
+      color: black;
+      width: 100%;
+      height: 70px;
     }
-    .search_line_effect :hover{
-      background:orange;
-      color:white;
-      cursor:pointer;
+
+    .search_line_effect :hover {
+      background: orange;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-<div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper amber">
-      <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
-      <a href="index.html" class="brand-logo hide-on-large-only">JS Store</a>
-      <ul id="nav-mobile" style="margin-left:130px;" class="left hide-on-med-and-down">
-        <li><a href="index.html">Магазин</a></li>
-        <li><a href="library.html">Библиотека</a></li>
-      </ul>
-      <form class="hide-on-med-and-down" id="form1">
-        <div class="input-field" style="max-width: 400pt;">
-          <input id="search" type="search" onfocusout="search_hide_result()" oninput='search_show_result(this.value)' placeholder="Начните поиск здесь..." required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-          <div id="searchResults">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper amber">
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small"><i class="material-icons">menu</i></a>
+        <a href="index.html" class="brand-logo hide-on-med-and-down" style="margin-left:10px;">JS Store</a>
+        <a href="index.html" class="brand-logo hide-on-large-only">JS Store</a>
+        <ul id="nav-mobile" style="margin-left:130px;" class="left hide-on-med-and-down">
+          <li><a href="index.html">Магазин</a></li>
+          <li><a href="library.html">Библиотека</a></li>
+        </ul>
+        <form class="hide-on-med-and-down" id="form1">
+          <div class="input-field" style="max-width: 400pt;">
+            <input id="search" type="search" onfocusout="search_hide_result()" oninput='search_show_result(this.value)' placeholder="Начните поиск здесь..." required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults">
 
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </nav>
-</div>
+        </form>
+      </div>
+    </nav>
+  </div>
 
+  <ul id="slide-out" class="sidenav">
+    <li><a class="subheader">Основные разделы</a></li>
+    <li><a class="waves-effect" href="index.html">Главная</a></li>
+    <li><a class="waves-effect" href="library.html">Библиотека</a></li>
+    <div class="divider">
+    </div>
+    <li><a class="subheader">Поиск</a></li>
+    <li><input type="text" required maxlength="32" oninput="search_show_result_mob(this.value)" style="margin-left:32px;width:80%;"></input></li>
+    <div id="searchResults2">
+
+    </div>
+  </ul>
 
   <section class="black">
     <div class="carousel carousel-slider" data-indicators="true" style="z-index:1;">
@@ -154,9 +168,9 @@
       setInterval(autoplay, 4500);
     });
   </script>
-  <script src="js/db.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/start.js"></script>
+  <script src="js/db.js?ver=1.0.0"></script>
+  <script src="js/search.js?ver=1.0.0"></script>
+  <script src="js/start.js?ver=1.0.0"></script>
 </body>
 
 </html>
