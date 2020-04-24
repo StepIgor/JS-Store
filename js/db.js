@@ -10,8 +10,8 @@ var db = {
     other_sources:["https://www.microsoft.com/ru-ru/p/%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA-difresru/9pmptp5xfzx0","https://play.google.com/store/apps/details?id=ru.difres.android.diary"],
     screenshots:6,
     mobile_support:true,
-    version:"1.1",
-    change_log:"1. Navbar теперь фиксированный как на десктопе, так и на смартфонах.<br>2. Улучшена механика определения размера textbox при создании и редактировании задания.",
+    version:"1.2",
+    change_log:"Обновлен логотип программы.",
     publish_date:"1.03.2020"
   }
 };
@@ -25,5 +25,6 @@ var developers = {
 
 
 var types = {
-  1 : "Программа"
+  1 : "Программа",
+  2 : "Игра"
 };
