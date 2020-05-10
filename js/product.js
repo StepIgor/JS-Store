@@ -38,7 +38,7 @@ if (params['id'] == "" || params['id'] == undefined){
     document.getElementById('icon_block').src = "img/apps_screenshots/"+params['id']+"/0.png";
     document.getElementById('title_block').innerHTML = db[parseInt(params['id'])]['product_name'];
     document.getElementById('title_block_mob').innerHTML = db[parseInt(params['id'])]['product_name'];
-    document.getElementById('developer_block').innerHTML = developers[parseInt(params['id'])]['username'];
+    document.getElementById('developer_block').innerHTML = developers[db[parseInt(params['id'])]['developer_id']]['username'];
     document.getElementById('app_category').innerHTML = types[db[parseInt(params['id'])]['type']];
     document.getElementById('short_desc').innerHTML = db[parseInt(params['id'])]['short_description'];
     document.getElementById('version_block').innerHTML = db[parseInt(params['id'])]['version'];
@@ -49,7 +49,7 @@ if (params['id'] == "" || params['id'] == undefined){
     document.getElementById('prod_description').innerHTML = db[parseInt(params['id'])]['full_description'];
     document.getElementById('changelog_block').innerHTML = db[parseInt(params['id'])]['change_log'];
     document.getElementById('pub_date_line').innerHTML = db[parseInt(params['id'])]['publish_date'];
-    document.getElementById('dev_info_line').innerHTML = developers[parseInt(params['id'])]['username'];
+    document.getElementById('dev_info_line').innerHTML = developers[db[parseInt(params['id'])]['developer_id']]['username'];
     document.getElementById('cat_info_line').innerHTML = types[db[parseInt(params['id'])]['type']];
 
     if (db[parseInt(params['id'])]['mobile_support'] == true){
