@@ -1,0 +1,17 @@
+{
+  "short_name": "JS Store",
+  "name": "JS Store: приложения без установки",
+  "description": "Магазин JS-приложений",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFC107"
+}
