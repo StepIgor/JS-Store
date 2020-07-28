@@ -28,6 +28,21 @@ var db = {
     version : "1.0",
     change_log : "Первая версия игры.",
     publish_date : "10.05.2020"
+  },
+  3:{
+    product_name : "Счётчик",
+    developer_id : 1,
+    type : 1,
+    active_url : "https://simplecounter.difres.ru",
+    repos_url : "https://github.com/StepIgor/JS_Simple_Counter",
+    short_description : "Простое приложение для счёта",
+    full_description : "Если не хватает пальцев на руке, чтобы что-то посчитать, или запоминать неудобно, то это приложение вам подойдет.",
+    other_sources : [],
+    screenshots : 4,
+    mobile_support : true,
+    version : "1.0",
+    change_log : "Первая версия программы.",
+    publish_date : "28.07.2020"
   }
 };
 
