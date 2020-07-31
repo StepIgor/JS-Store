@@ -43,6 +43,21 @@ var db = {
     version : "1.0",
     change_log : "Первая версия программы.",
     publish_date : "28.07.2020"
+  },
+  4:{
+    product_name : "GWallpapers",
+    developer_id : 1,
+    type : 1,
+    active_url : "https://gradientwallpapers.difres.ru",
+    repos_url : "https://github.com/StepIgor/js_gradient_wallpapers",
+    short_description : "Обои в стиле градиент",
+    full_description : "Под градиентом понимают изображение, включающее в себя несколько цветов, плавно переходящих друг в друга. На подобных картинках вы не найдете мелких деталей или слишком контрастных элементов, что делает удобным прочтение основной информации на главном экране смартфона (текст в статусбаре, подписи значков).",
+    other_sources : [],
+    screenshots : 3,
+    mobile_support : true,
+    version : "1.0",
+    change_log : "Первая версия программы.",
+    publish_date : "31.07.2020"
   }
 };
 
