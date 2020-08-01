@@ -29,7 +29,7 @@ function search_show_result(txt) {
 }
 
 function search_hide_result() {
-  setTimeout(function(){$('#searchResults').html('');},85);
+  setTimeout(function(){$('#searchResults').html('');},250);
 }
 
 
