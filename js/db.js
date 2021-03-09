@@ -12,7 +12,7 @@ var db = {
     mobile_support:true,
     version:"1.2",
     change_log:"Обновлен логотип программы.",
-    publish_date:"1.03.2020"
+    publish_date:"01.03.2020"
   },
   2:{
     product_name : "Разминка.Счёт | difres.ru",
